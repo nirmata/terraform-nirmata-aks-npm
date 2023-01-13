@@ -21,13 +21,13 @@ Make the necessary changes to the main.tf file
 ## Usage:
 
 ```
-module "n4k_module" {
-source              	= "./n4k_module"
-aks_cluster_name 	= "<<AKS cluster name>>"
-azure_resource_group   	= "<<Azure Resource Group Name>>"
-nirmata_api_key	      	= "<<Nirmata API token>>"
-imagePullSecret_password = "<<Image pull secret token>>"
-nirmata_cluster_name  	= "<<Name of the cluster to be registered in NPM>>"
+module "aks-npm" {
+  source  = "nirmata/aks-npm/nirmata"
+  aks_cluster_name 	= "<<AKS cluster name>>"
+  azure_resource_group   	= "<<Azure Resource Group Name>>"
+  nirmata_api_key	      	= "<<Nirmata API token>>"
+  imagePullSecret_password = "<<Image pull secret token>>"
+  nirmata_cluster_name  	= "<<Name of the cluster to be registered in NPM>>"
 }
 ```
 
@@ -36,11 +36,11 @@ terraform init
 ```
 
 ```
-terraform plan -target module.n4k_module.nirmata_cluster_registered.aks-registered
+terraform plan -target module.aks-npm.nirmata_cluster_registered.aks-registered
 ```
 
 ```
-terraform apply -target module.n4k_module.nirmata_cluster_registered.aks-registered
+terraform apply -target module.aks-npm.nirmata_cluster_registered.aks-registered
 ```
 
 ```
