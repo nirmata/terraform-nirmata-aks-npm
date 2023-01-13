@@ -2,9 +2,10 @@
 
 The terraform module deploys N4K, best practice policy set, and pod security policy set and registers the AKS cluster with NPM.
 
-Prerequisite:-
+Prerequisites:-
 
-	1. Azure CLI should be configured with AKS Cluster Access.
+	1. Existing AKS Cluster should be available.
+	2. Azure CLI should be configured with AKS Cluster Access.
 
 Note:- Currently this module is supported to:-
 
