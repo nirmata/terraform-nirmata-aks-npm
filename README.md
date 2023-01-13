@@ -22,7 +22,7 @@ Make the necessary changes or replace the respective values to the main.tf file
 
 ```
 module "aks-npm" {
-  source  = "nirmata/aks-npm/nirmata"
+  source  			= "nirmata/aks-npm/nirmata"
   aks_cluster_name 	        = "AKS cluster name"
   azure_resource_group   	= "Azure Resource Group Name"
   nirmata_api_key	      	= "Nirmata API token"
